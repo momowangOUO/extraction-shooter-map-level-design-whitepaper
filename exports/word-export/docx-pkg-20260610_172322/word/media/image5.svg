@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">失落圣所 Demo v0 细节摆放草案</title>
+  <desc id="desc">在修正后的 Demo 框线地图上标注隐蔽点、宝箱、普通怪、精英怪、Boss/事件点和探测点。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#ecfdf5"/></linearGradient>
+    <linearGradient id="map-bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f3f4f6"/><stop offset="1" stop-color="#e5e7eb"/></linearGradient>
+    <linearGradient id="mist" x1="0" x2="1"><stop offset="0" stop-color="#14532d"/><stop offset="1" stop-color="#22c55e"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#111827" flood-opacity=".15"/></filter>
+    <path id="i-chest" d="M2 6h12v7H2V6Zm1.2-2.5h9.6L14 6H2l1.2-2.5ZM7 6h2v7H7V6Z"/>
+    <path id="i-enemy" d="M8 1.8 13.5 5v6L8 14.2 2.5 11V5L8 1.8Zm0 3.2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/>
+    <path id="i-elite" d="M8 1 15 8 8 15 1 8 8 1Zm0 3.4L4.4 8 8 11.6 11.6 8 8 4.4Z"/>
+    <path id="i-detect" d="M8 2C4.5 2 2.2 5.1 1.4 8c.8 2.9 3.1 6 6.6 6s5.8-3.1 6.6-6C13.8 5.1 11.5 2 8 2Zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6Z"/>
+  </defs>
+  <style>
+    .h1{font:700 24px "Microsoft YaHei",Arial,sans-serif;fill:#111827}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.panel{fill:#fff;stroke:#e2e8f0;filter:url(#soft-shadow)}.map{fill:url(#map-bg);stroke:#1f2937;stroke-width:1.9}.grid-minor{stroke:#cbd5e1;stroke-width:.45;opacity:.42}.grid-major{stroke:#94a3b8;stroke-width:.7;opacity:.72}.axis-label{font:700 6px "Microsoft YaHei",Arial,sans-serif;fill:#475569;text-anchor:middle;dominant-baseline:middle}.region{fill:#fff;stroke:#334155;stroke-width:.8;opacity:.88}.wall{fill:none;stroke:#374151;stroke-width:2.1;stroke-linecap:square}.tier0{fill:#dc3b34}.tier1{fill:#d97706}.tier2{fill:#6d28d9}.spawn{fill:#fff;stroke:#16a34a;stroke-width:5}.extract{fill:#fff;stroke:#dc3b34;stroke-width:5}.mist{fill:url(#mist);opacity:.86;filter:url(#soft-shadow)}.detect-ring{fill:none;stroke:#0ea5e9;stroke-width:2;stroke-dasharray:5 4}.leader{fill:none;stroke:#334155;stroke-width:.85;stroke-dasharray:3 3}.label{font:700 7px "Microsoft YaHei",Arial,sans-serif;fill:#111827;text-anchor:middle;dominant-baseline:middle}.tiny{font:700 8px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.legend{font:700 13px "Microsoft YaHei",Arial,sans-serif;fill:#111827}.cap{font:400 10.8px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.loot{fill:#f59e0b}.mob{fill:#64748b}.elite{fill:#be123c}.event{fill:#7c3aed}.detect{fill:#0ea5e9}.white{font:700 7px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+  </style>
+
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="44" y="40">Demo v0 精确点位图：Y 向上设计坐标</text>
+  <text class="sub" x="44" y="62">300×300 为左下原点灰盒坐标系。图上只保留点位标签，完整用途与调参说明见报告表格。</text>
+
+  <!-- 地图层 -->
+  <g transform="translate(44 78) scale(1.62)">
+    <rect class="map" x="0" y="0" width="300" height="300" rx="2"/>
+    <!-- 坐标网格层：25 单位细线，50 单位主线 -->
+    <path class="grid-minor" d="M25 0 V300 M75 0 V300 M125 0 V300 M175 0 V300 M225 0 V300 M275 0 V300 M0 25 H300 M0 75 H300 M0 125 H300 M0 175 H300 M0 225 H300 M0 275 H300"/>
+    <path class="grid-major" d="M50 0 V300 M100 0 V300 M150 0 V300 M200 0 V300 M250 0 V300 M0 50 H300 M0 100 H300 M0 150 H300 M0 200 H300 M0 250 H300"/>
+    <text class="axis-label" x="-14" y="0">300</text><text class="axis-label" x="-14" y="50">250</text><text class="axis-label" x="-14" y="100">200</text><text class="axis-label" x="-14" y="150">150</text><text class="axis-label" x="-14" y="200">100</text><text class="axis-label" x="-14" y="250">50</text><text class="axis-label" x="-14" y="300">0</text>
+    <text class="axis-label" x="0" y="314">0</text><text class="axis-label" x="50" y="314">50</text><text class="axis-label" x="100" y="314">100</text><text class="axis-label" x="150" y="314">150</text><text class="axis-label" x="200" y="314">200</text><text class="axis-label" x="250" y="314">250</text><text class="axis-label" x="300" y="314">300</text>
+
+    <!-- 区域层 -->
+    <rect class="region" x="8" y="12" width="84" height="78" rx="3"/><text class="label" x="18" y="22">A</text>
+    <rect class="region" x="224" y="0" width="76" height="72" rx="3"/><text class="label" x="236" y="14">B</text>
+    <rect class="region" x="112" y="82" width="116" height="98" rx="3"/><text class="label" x="124" y="96">C</text>
+    <rect class="region" x="28" y="160" width="110" height="78" rx="3"/><text class="label" x="40" y="174">D</text>
+    <rect class="region" x="224" y="86" width="74" height="128" rx="3"/><text class="label" x="236" y="100">E</text>
+    <rect class="region" x="190" y="228" width="110" height="72" rx="3"/><text class="label" x="202" y="242">F</text>
+    <rect class="tier2" x="24" y="28" width="54" height="34" rx="1.5"/><rect class="tier2" x="236" y="2" width="64" height="48" rx="1.5"/>
+    <rect class="tier2" x="84" y="89" width="28" height="48" rx="1.5"/><rect class="tier2" x="235" y="107" width="53" height="40" rx="1.5"/>
+    <rect class="tier2" x="60" y="235" width="32" height="63" rx="1.5"/><rect class="tier2" x="160" y="184" width="55" height="28" rx="1.5"/>
+    <rect class="tier1" x="38" y="164" width="46" height="46" rx="1.5"/><rect class="tier1" x="166" y="113" width="49" height="46" rx="1.5"/><rect class="tier1" x="207" y="250" width="91" height="48" rx="1.5"/>
+    <rect class="tier0" x="84" y="184" width="38" height="26" rx="1.5"/>
+
+    <!-- 墙体层 -->
+    <path class="wall" d="M19 18 H83 M104 0 V17 M115 17 H234 M234 17 V51 M243 50 H287 M287 59 V105 M244 105 H287 V147"/>
+    <path class="wall" d="M18 30 V64 M18 64 H83 M83 30 H104 M94 64 H158 M158 30 V78 M158 78 H94"/>
+    <path class="wall" d="M0 89 H64 M38 101 V149 M0 164 H20 M20 164 V187 M18 212 H38"/>
+    <path class="wall" d="M83 88 V137 M112 88 H139 M160 89 V136 M162 89 H215 M215 89 V136"/>
+    <path class="wall" d="M236 107 V139 M236 149 H300 M267 164 V237 M203 160 V238 M177 183 H215 V300"/>
+    <path class="wall" d="M38 210 V236 H58 V282 M58 236 H190 M125 213 H203 M112 267 V300 M127 267 H191"/>
+    <path class="wall" d="M0 187 H38 M58 164 H84 M84 164 V210 M58 210 H122 M123 210 H203 M203 250 H267 M202 267 V300"/>
+
+    <!-- 节点层：出生与撤离 -->
+    <circle class="spawn" cx="9" cy="47" r="8"/><circle class="spawn" cx="130" cy="6" r="8"/><circle class="spawn" cx="125" cy="76" r="8"/><circle class="spawn" cx="277" cy="93" r="8"/>
+    <circle class="spawn" cx="10" cy="151" r="8"/><circle class="spawn" cx="144" cy="224" r="8"/><circle class="spawn" cx="251" cy="204" r="8"/><circle class="spawn" cx="38" cy="286" r="8"/>
+    <circle class="extract" cx="145" cy="150" r="8"/><circle class="extract" cx="157" cy="290" r="8"/>
+
+    <!-- 节点层：隐蔽点 H，远离出生/撤离/唯一门 -->
+    <ellipse class="mist" cx="63" cy="86" rx="15" ry="9"/><text class="white" x="63" y="86">H1</text>
+    <ellipse class="mist" cx="137" cy="102" rx="16" ry="9"/><text class="white" x="137" y="102">H2</text>
+    <ellipse class="mist" cx="228" cy="121" rx="16" ry="9"/><text class="white" x="228" y="121">H3</text>
+    <ellipse class="mist" cx="247" cy="181" rx="16" ry="9"/><text class="white" x="247" y="181">H4</text>
+    <ellipse class="mist" cx="126" cy="207" rx="16" ry="9"/><text class="white" x="126" y="207">H5</text>
+    <ellipse class="mist" cx="54" cy="227" rx="14" ry="8"/><text class="white" x="54" y="227">H6</text>
+    <ellipse class="mist" cx="224" cy="241" rx="16" ry="9"/><text class="white" x="224" y="241">H7</text>
+
+    <!-- 连线层：探测范围 -->
+    <circle class="detect-ring" cx="116" cy="103" r="18"/><circle class="detect-ring" cx="224" cy="121" r="18"/><circle class="detect-ring" cx="137" cy="207" r="18"/><circle class="detect-ring" cx="220" cy="241" r="18"/>
+
+    <!-- 节点层：宝箱、敌人与事件 -->
+    <use href="#i-chest" x="44" y="40" width="12" height="12" class="loot"/><text class="label" x="50" y="58">C1</text>
+    <use href="#i-chest" x="258" y="23" width="12" height="12" class="loot"/><text class="label" x="264" y="41">C2</text>
+    <use href="#i-chest" x="93" y="112" width="12" height="12" class="loot"/><text class="label" x="99" y="130">C3</text>
+    <use href="#i-chest" x="185" y="131" width="12" height="12" class="loot"/><text class="label" x="191" y="149">C4</text>
+    <use href="#i-chest" x="254" y="124" width="12" height="12" class="loot"/><text class="label" x="260" y="142">C5</text>
+    <use href="#i-chest" x="71" y="184" width="12" height="12" class="loot"/><text class="label" x="77" y="202">C6</text>
+    <use href="#i-chest" x="182" y="194" width="12" height="12" class="loot"/><text class="label" x="188" y="212">C7</text>
+    <use href="#i-chest" x="252" y="272" width="12" height="12" class="loot"/><text class="label" x="258" y="290">C8</text>
+
+    <use href="#i-enemy" x="51" y="69" width="13" height="13" class="mob"/><text class="label" x="58" y="88">E1</text>
+    <use href="#i-enemy" x="133" y="69" width="13" height="13" class="mob"/><text class="label" x="140" y="88">E2</text>
+    <use href="#i-enemy" x="234" y="84" width="13" height="13" class="mob"/><text class="label" x="241" y="103">E3</text>
+    <use href="#i-enemy" x="30" y="150" width="13" height="13" class="mob"/><text class="label" x="37" y="169">E4</text>
+    <use href="#i-enemy" x="171" y="166" width="13" height="13" class="mob"/><text class="label" x="178" y="185">E5</text>
+    <use href="#i-enemy" x="233" y="201" width="13" height="13" class="mob"/><text class="label" x="240" y="220">E6</text>
+    <use href="#i-enemy" x="79" y="252" width="13" height="13" class="mob"/><text class="label" x="86" y="271">E7</text>
+    <use href="#i-enemy" x="174" y="252" width="13" height="13" class="mob"/><text class="label" x="181" y="271">E8</text>
+
+    <use href="#i-elite" x="190" y="122" width="15" height="15" class="elite"/><text class="label" x="198" y="143">M1</text>
+    <use href="#i-elite" x="260" y="260" width="15" height="15" class="elite"/><text class="label" x="268" y="281">M2</text>
+    <circle class="event" cx="103" cy="197" r="8"/><text class="white" x="103" y="197">B</text><text class="label" x="103" y="217">T0</text>
+    <use href="#i-detect" x="112" y="96" width="12" height="12" class="detect"/><use href="#i-detect" x="217" y="114" width="12" height="12" class="detect"/><use href="#i-detect" x="131" y="200" width="12" height="12" class="detect"/><use href="#i-detect" x="214" y="234" width="12" height="12" class="detect"/>
+
+    <!-- 文本层 -->
+    <text class="label" x="145" y="135">中心撤离</text><text class="label" x="157" y="274">南部撤离</text>
+  </g>
+
+  <!-- 节点层：图例 -->
+  <g>
+    <rect class="panel" x="558" y="88" width="198" height="350" rx="12"/>
+    <ellipse class="mist" cx="594" cy="122" rx="18" ry="10"/><text class="legend" x="626" y="126">H 隐蔽点</text>
+    <use href="#i-chest" x="586" y="152" width="18" height="18" class="loot"/><text class="legend" x="626" y="167">C 宝箱/容器</text>
+    <use href="#i-enemy" x="586" y="196" width="18" height="18" class="mob"/><text class="legend" x="626" y="211">E 普通怪</text>
+    <use href="#i-elite" x="586" y="240" width="18" height="18" class="elite"/><text class="legend" x="626" y="255">M 精英怪</text>
+    <circle class="event" cx="595" cy="292" r="9"/><text class="white" x="595" y="292">B</text><text class="legend" x="626" y="297">T0 事件点</text>
+    <use href="#i-detect" x="586" y="326" width="18" height="18" class="detect"/><text class="legend" x="626" y="341">探测符文</text>
+    <text class="cap" x="582" y="386">
+      <tspan x="582" dy="0">原则：隐蔽点不贴出生、撤离、</tspan>
+      <tspan x="582" dy="17">唯一门口；T1/T0 配精英或事件，</tspan>
+      <tspan x="582" dy="17">撤离段配扰动怪反蹲点。</tspan>
+    </text>
+  </g>
+
+  <!-- 文本层 -->
+  <rect class="panel" x="558" y="466" width="198" height="66" rx="12"/>
+  <text class="cap" x="582" y="492">
+    <tspan x="582" dy="0">这是第一轮 LD 摆放草案，</tspan>
+    <tspan x="582" dy="17">用于测试首轮接敌、蹲点、</tspan>
+    <tspan x="582" dy="17">带宝撤离和单排潜入。</tspan>
+  </text>
+</svg>

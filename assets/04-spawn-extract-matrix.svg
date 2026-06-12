@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">出生点到撤离点矩阵</title>
+  <desc id="desc">矩阵以统一单元格边界框布局，所有文本两行居中避免遮挡。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#f1f5f9"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity=".12"/></filter>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.panel{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.head{fill:#334155}.good{fill:#dcfce7}.mid{fill:#fef3c7}.bad{fill:#ffe4e6}.grid{stroke:#d8e0ea;stroke-width:1}.txt{font:700 11.5px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}.cap{font:400 9.5px "Microsoft YaHei",Arial,sans-serif;fill:#64748b;text-anchor:middle;dominant-baseline:middle}.white{font:700 11.5px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">出生点到撤离点矩阵</text>
+  <text class="sub" x="48" y="76">用距离、暴露和路径独占度提前发现不公平组合。</text>
+
+  <!-- 矩阵层：x=48 y=122，rowHeader=92，cell=110x64 -->
+  <g>
+    <rect class="panel" x="48" y="122" width="532" height="322" rx="12"/>
+    <rect class="head" x="48" y="122" width="92" height="58" rx="10"/>
+    <rect class="head" x="140" y="122" width="110" height="58"/><rect class="head" x="250" y="122" width="110" height="58"/><rect class="head" x="360" y="122" width="110" height="58"/><rect class="head" x="470" y="122" width="110" height="58" rx="10"/>
+    <rect class="head" x="48" y="180" width="92" height="64"/><rect class="head" x="48" y="244" width="92" height="64"/><rect class="head" x="48" y="308" width="92" height="64"/><rect class="head" x="48" y="372" width="92" height="72" rx="10"/>
+    <g>
+      <rect class="good" x="140" y="180" width="110" height="64"/><rect class="mid" x="250" y="180" width="110" height="64"/><rect class="bad" x="360" y="180" width="110" height="64"/><rect class="mid" x="470" y="180" width="110" height="64"/>
+      <rect class="mid" x="140" y="244" width="110" height="64"/><rect class="bad" x="250" y="244" width="110" height="64"/><rect class="good" x="360" y="244" width="110" height="64"/><rect class="mid" x="470" y="244" width="110" height="64"/>
+      <rect class="bad" x="140" y="308" width="110" height="64"/><rect class="good" x="250" y="308" width="110" height="64"/><rect class="mid" x="360" y="308" width="110" height="64"/><rect class="mid" x="470" y="308" width="110" height="64"/>
+      <rect class="mid" x="140" y="372" width="110" height="72"/><rect class="mid" x="250" y="372" width="110" height="72"/><rect class="good" x="360" y="372" width="110" height="72"/><rect class="bad" x="470" y="372" width="110" height="72"/>
+    </g>
+    <path class="grid" d="M140 122v322M250 122v322M360 122v322M470 122v322M48 180h532M48 244h532M48 308h532M48 372h532"/>
+  </g>
+
+  <!-- 文本层 -->
+  <g>
+    <text class="white" x="94" y="151">出生 / 撤离</text><text class="white" x="195" y="151">E1 公路</text><text class="white" x="305" y="151">E2 码头</text><text class="white" x="415" y="151">E3 山口</text><text class="white" x="525" y="151">E4 条件</text>
+    <text class="white" x="94" y="212">S1 西南</text><text class="white" x="94" y="276">S2 西北</text><text class="white" x="94" y="340">S3 东南</text><text class="white" x="94" y="408">S4 东北</text>
+    <text class="txt" x="195" y="204">近 / 低暴露</text><text class="cap" x="195" y="226">保底</text>
+    <text class="txt" x="305" y="204">中 / 争夺</text><text class="cap" x="305" y="226">码头线</text>
+    <text class="txt" x="415" y="204">远 / 高暴露</text><text class="cap" x="415" y="226">二段路线</text>
+    <text class="txt" x="525" y="204">中 / 条件</text><text class="cap" x="525" y="226">电闸</text>
+    <text class="txt" x="195" y="268">中 / 交叉</text><text class="cap" x="195" y="290">铁路</text>
+    <text class="txt" x="305" y="268">远 / 热区</text><text class="cap" x="305" y="290">夹击</text>
+    <text class="txt" x="415" y="268">近 / 绕行</text><text class="cap" x="415" y="290">避中心</text>
+    <text class="txt" x="525" y="268">中 / 条件</text><text class="cap" x="525" y="290">噪声</text>
+    <text class="txt" x="195" y="332">远 / 高暴露</text><text class="cap" x="195" y="354">主线重叠</text>
+    <text class="txt" x="305" y="332">近 / 低暴露</text><text class="cap" x="305" y="354">保底</text>
+    <text class="txt" x="415" y="332">中 / 争夺</text><text class="cap" x="415" y="354">污水站</text>
+    <text class="txt" x="525" y="332">中 / 条件</text><text class="cap" x="525" y="354">钥匙</text>
+    <text class="txt" x="195" y="396">中 / 绕行</text><text class="cap" x="195" y="418">外圈</text>
+    <text class="txt" x="305" y="396">中 / 交叉</text><text class="cap" x="305" y="418">拥堵</text>
+    <text class="txt" x="415" y="396">近 / 低暴露</text><text class="cap" x="415" y="418">自然保底</text>
+    <text class="txt" x="525" y="396">近 / 高收益</text><text class="cap" x="525" y="418">需限制</text>
+  </g>
+
+  <!-- 图例层 -->
+  <g>
+    <rect class="panel" x="620" y="154" width="132" height="214" rx="12"/>
+    <text class="txt" x="686" y="188">颜色判定</text>
+    <rect x="642" y="224" width="22" height="14" rx="4" fill="#dcfce7"/><text class="sub" x="676" y="236">可接受</text>
+    <rect x="642" y="262" width="22" height="14" rx="4" fill="#fef3c7"/><text class="sub" x="676" y="274">需实测</text>
+    <rect x="642" y="300" width="22" height="14" rx="4" fill="#ffe4e6"/><text class="sub" x="676" y="312">优先修正</text>
+    <text class="sub" x="642" y="346">修正：绕行、条件、收益、暴露前摇</text>
+  </g>
+</svg>

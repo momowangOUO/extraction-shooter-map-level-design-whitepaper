@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">失落圣所 Demo v0 框线地图拓扑</title>
+  <desc id="desc">按用户提供的 300×300 Demo 框线图复刻，校正 T0-T3 物资区、8 个出生点、2 个撤离点和主要墙线位置。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#f5f3ff"/></linearGradient>
+    <linearGradient id="map-bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f3f4f6"/><stop offset="1" stop-color="#e5e7eb"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#111827" flood-opacity=".15"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#475569"/></marker>
+    <path id="i-spawn" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm0 3a3.5 3.5 0 1 1 0 7 3.5 3.5 0 0 1 0-7Z"/>
+    <path id="i-extract" d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Zm0 3.2a3.3 3.3 0 1 1 0 6.6 3.3 3.3 0 0 1 0-6.6Z"/>
+  </defs>
+  <style>
+    .h1{font:700 24px "Microsoft YaHei",Arial,sans-serif;fill:#111827}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.panel{fill:#fff;stroke:#e2e8f0;filter:url(#soft-shadow)}.map{fill:url(#map-bg);stroke:#1f2937;stroke-width:1.9}.grid-minor{stroke:#cbd5e1;stroke-width:.45;opacity:.42}.grid-major{stroke:#94a3b8;stroke-width:.7;opacity:.7}.axis-label{font:700 6px "Microsoft YaHei",Arial,sans-serif;fill:#475569;text-anchor:middle;dominant-baseline:middle}.wall{fill:none;stroke:#374151;stroke-width:2.1;stroke-linecap:square}.tier0{fill:#dc3b34}.tier1{fill:#d97706}.tier2{fill:#6d28d9}.tier3{fill:#9ca3af}.spawn-ring{fill:#fff;stroke:#16a34a;stroke-width:6}.extract-ring{fill:#fff;stroke:#dc3b34;stroke-width:6}.route{fill:none;stroke:#475569;stroke-width:2.2;stroke-dasharray:7 6;marker-end:url(#arrow)}.label{font:700 8px "Microsoft YaHei",Arial,sans-serif;fill:#111827;text-anchor:middle;dominant-baseline:middle}.legend{font:700 14px "Microsoft YaHei",Arial,sans-serif;fill:#111827}.cap{font:400 11px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.tiny{font:700 9px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+  </style>
+
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="44" y="40">失落圣所地下城 Demo v0：300×300 框线地图</text>
+  <text class="sub" x="44" y="62">复刻当前 LA 框线规划；可见坐标为左下原点、Y 向上的 300×300 设计坐标。</text>
+
+  <!-- 地图层 -->
+  <g transform="translate(44 78) scale(1.62)">
+    <rect class="map" x="0" y="0" width="300" height="300" rx="2"/>
+
+    <!-- 坐标网格层：SVG 内部 Y 向下，图面标签显示设计坐标 Y 向上 -->
+    <path class="grid-minor" d="M25 0 V300 M75 0 V300 M125 0 V300 M175 0 V300 M225 0 V300 M275 0 V300 M0 25 H300 M0 75 H300 M0 125 H300 M0 175 H300 M0 225 H300 M0 275 H300"/>
+    <path class="grid-major" d="M50 0 V300 M100 0 V300 M150 0 V300 M200 0 V300 M250 0 V300 M0 50 H300 M0 100 H300 M0 150 H300 M0 200 H300 M0 250 H300"/>
+    <text class="axis-label" x="-14" y="0">300</text><text class="axis-label" x="-14" y="50">250</text><text class="axis-label" x="-14" y="100">200</text><text class="axis-label" x="-14" y="150">150</text><text class="axis-label" x="-14" y="200">100</text><text class="axis-label" x="-14" y="250">50</text><text class="axis-label" x="-14" y="300">0</text>
+    <text class="axis-label" x="0" y="314">0</text><text class="axis-label" x="50" y="314">50</text><text class="axis-label" x="100" y="314">100</text><text class="axis-label" x="150" y="314">150</text><text class="axis-label" x="200" y="314">200</text><text class="axis-label" x="250" y="314">250</text><text class="axis-label" x="300" y="314">300</text>
+
+    <!-- 物资层：坐标按 300×300 Demo 图归一 -->
+    <rect class="tier2" x="24" y="28" width="54" height="34" rx="1.5"/><text class="tiny" x="51" y="45">T2</text>
+    <rect class="tier2" x="236" y="2" width="64" height="48" rx="1.5"/><text class="tiny" x="268" y="26">T2</text>
+    <rect class="tier2" x="84" y="89" width="28" height="48" rx="1.5"/><text class="tiny" x="98" y="113">T2</text>
+    <rect class="tier2" x="235" y="107" width="53" height="40" rx="1.5"/><text class="tiny" x="262" y="127">T2</text>
+    <rect class="tier2" x="60" y="235" width="32" height="63" rx="1.5"/><text class="tiny" x="76" y="266">T2</text>
+    <rect class="tier2" x="160" y="184" width="55" height="28" rx="1.5"/><text class="tiny" x="188" y="198">T2</text>
+    <rect class="tier1" x="38" y="164" width="46" height="46" rx="1.5"/><text class="tiny" x="61" y="187">T1</text>
+    <rect class="tier1" x="166" y="113" width="49" height="46" rx="1.5"/><text class="tiny" x="191" y="136">T1</text>
+    <rect class="tier1" x="207" y="250" width="91" height="48" rx="1.5"/><text class="tiny" x="253" y="274">T1</text>
+    <rect class="tier0" x="84" y="184" width="38" height="26" rx="1.5"/><text class="tiny" x="103" y="197">T0</text>
+
+    <!-- 墙体层：主墙线按原图走向修正 -->
+    <path class="wall" d="M19 18 H83 M104 0 V17 M115 17 H234 M234 17 V51 M243 50 H287 M287 59 V105 M244 105 H287 V147"/>
+    <path class="wall" d="M18 30 V64 M18 64 H83 M83 30 H104 M94 64 H158 M158 30 V78 M158 78 H94"/>
+    <path class="wall" d="M0 89 H64 M38 101 V149 M0 164 H20 M20 164 V187 M18 212 H38"/>
+    <path class="wall" d="M83 88 V137 M112 88 H139 M160 89 V136 M162 89 H215 M215 89 V136"/>
+    <path class="wall" d="M236 107 V139 M236 149 H300 M267 164 V237 M203 160 V238 M177 183 H215 V300"/>
+    <path class="wall" d="M38 210 V236 H58 V282 M58 236 H190 M125 213 H203 M112 267 V300 M127 267 H191"/>
+    <path class="wall" d="M0 187 H38 M58 164 H84 M84 164 V210 M58 210 H122 M123 210 H203 M203 250 H267 M202 267 V300"/>
+
+    <!-- 连线层 -->
+    <path class="route" d="M9 47 C48 80 76 126 103 197"/>
+    <path class="route" d="M130 6 C150 58 174 102 191 136"/>
+    <path class="route" d="M277 93 C260 112 242 125 222 135"/>
+    <path class="route" d="M144 224 C176 235 213 252 253 274"/>
+
+    <!-- 节点层 -->
+    <circle class="spawn-ring" cx="9" cy="47" r="10"/><circle class="spawn-ring" cx="130" cy="6" r="10"/>
+    <circle class="spawn-ring" cx="125" cy="76" r="10"/><circle class="spawn-ring" cx="277" cy="93" r="10"/>
+    <circle class="spawn-ring" cx="10" cy="151" r="10"/><circle class="spawn-ring" cx="144" cy="224" r="10"/>
+    <circle class="spawn-ring" cx="251" cy="204" r="10"/><circle class="spawn-ring" cx="38" cy="286" r="10"/>
+    <circle class="extract-ring" cx="145" cy="150" r="10"/><circle class="extract-ring" cx="157" cy="290" r="10"/>
+
+    <!-- 文本层 -->
+    <text class="label" x="145" y="132">中心撤离</text>
+    <text class="label" x="157" y="272">南部撤离</text>
+  </g>
+
+  <!-- 节点层 -->
+  <g>
+    <rect class="panel" x="558" y="88" width="198" height="310" rx="12"/>
+    <rect class="tier0" x="582" y="116" width="22" height="22" rx="4"/><text class="legend" x="616" y="132">T0 物资区</text>
+    <rect class="tier1" x="582" y="158" width="22" height="22" rx="4"/><text class="legend" x="616" y="174">T1 物资区</text>
+    <rect class="tier2" x="582" y="200" width="22" height="22" rx="4"/><text class="legend" x="616" y="216">T2 物资区</text>
+    <rect class="tier3" x="582" y="242" width="22" height="22" rx="4"/><text class="legend" x="616" y="258">T3 物资区</text>
+    <use href="#i-spawn" x="582" y="284" width="24" height="24" fill="#16a34a"/><text class="legend" x="616" y="302">出生点 × 8</text>
+    <use href="#i-extract" x="582" y="326" width="24" height="24" fill="#dc3b34"/><text class="legend" x="616" y="344">撤离点 × 2</text>
+    <text class="cap" x="582" y="376">此图只表达框线与硬点位。</text>
+    <text class="cap" x="582" y="394">底部 y=0，顶部 y=300。</text>
+  </g>
+
+  <!-- 文本层 -->
+  <rect class="panel" x="558" y="426" width="198" height="92" rx="12"/>
+  <text class="sub" x="582" y="456">
+    <tspan x="582" dy="0">修正点：右中 T2 上移，</tspan>
+    <tspan x="582" dy="18">中心撤离上移，右下出生左移，</tspan>
+    <tspan x="582" dy="18">墙线按原图主要分隔复刻。</tspan>
+  </text>
+</svg>

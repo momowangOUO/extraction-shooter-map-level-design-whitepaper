@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">Boss 房三方介入</title>
+  <desc id="desc">Boss 房中央祭坛和三条队伍路径均按边缘锚点连接，底部验收语句独立放置。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fbf7ef"/><stop offset="1" stop-color="#fef2f2"/></linearGradient>
+    <linearGradient id="boss" x1="0" x2="1"><stop offset="0" stop-color="#7f1d1d"/><stop offset="1" stop-color="#fb7185"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#1c1917" flood-opacity=".16"/></filter>
+    <marker id="a" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#166534"/></marker>
+    <marker id="b" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#6d28d9"/></marker>
+    <marker id="c" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#b45309"/></marker>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#1c1917}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#78716c}.room{fill:#fffaf0;stroke:#d6c7ad;filter:url(#soft-shadow)}.zone{fill:#fb7185;opacity:.15;stroke:#fb7185;stroke-dasharray:8 7}.altar{fill:url(#boss);filter:url(#soft-shadow)}.pathA{fill:none;stroke:#166534;stroke-width:4;marker-end:url(#a);stroke-linecap:round}.pathB{fill:none;stroke:#6d28d9;stroke-width:4;marker-end:url(#b);stroke-linecap:round}.pathC{fill:none;stroke:#b45309;stroke-width:4;marker-end:url(#c);stroke-linecap:round}.team{fill:#fff;stroke:#44403c;stroke-width:2;filter:url(#soft-shadow)}.label{font:700 12px "Microsoft YaHei",Arial,sans-serif;fill:#1c1917;text-anchor:middle}.white{font:700 11px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.panel{fill:#fffaf0;stroke:#d6c7ad;filter:url(#soft-shadow)}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">Boss 房三方介入</text>
+  <text class="sub" x="48" y="76">高价值公开事件必须允许切入、反切入和撤退。</text>
+
+  <!-- 空间层 -->
+  <rect class="room" x="150" y="126" width="500" height="340" rx="20"/>
+  <circle class="zone" cx="400" cy="300" r="146"/>
+  <rect class="altar" x="336" y="256" width="128" height="88" rx="14"/>
+  <text class="white" x="400" y="292">Boss 祭坛</text><text class="white" x="400" y="318">公开事件</text>
+
+  <!-- 连线层 -->
+  <path class="pathA" d="M96 300 C170 284 244 284 330 294"/>
+  <path class="pathB" d="M708 190 C615 204 536 236 465 278"/>
+  <path class="pathC" d="M690 440 C600 406 530 360 466 326"/>
+  <!-- 节点层 -->
+  <circle class="team" cx="96" cy="300" r="22"/><circle class="team" cx="708" cy="190" r="22"/><circle class="team" cx="690" cy="440" r="22"/>
+  <!-- 文本层 -->
+  <text class="label" x="96" y="342">A 正面队伍</text><text class="label" x="708" y="232">B 绕后队伍</text><text class="label" x="690" y="482">C 截撤队伍</text>
+
+  <rect class="panel" x="160" y="500" width="480" height="46" rx="10"/>
+  <text class="sub" x="190" y="528">验收：Boss 房至少 3 个入口、2 条撤退线、1 个探测隐蔽点、1 个反绕切入点。</text>
+</svg>

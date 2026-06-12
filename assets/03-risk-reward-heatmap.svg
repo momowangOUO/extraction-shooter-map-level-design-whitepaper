@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">风险收益热区</title>
+  <desc id="desc">左侧热力地图与右侧读法面板分离，POI 文本居中在独立边界框内。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#fff7ed"/></linearGradient>
+    <radialGradient id="heat" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#e11d48" stop-opacity=".78"/><stop offset=".48" stop-color="#f59e0b" stop-opacity=".46"/><stop offset="1" stop-color="#0f766e" stop-opacity=".10"/></radialGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity=".12"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#475569"/></marker>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.map{fill:#f8fafc;stroke:#d8e0ea;filter:url(#soft-shadow)}.grid{stroke:#e2e8f0;stroke-width:1}.poi{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.label{font:700 12px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}.cap{font:400 10px "Microsoft YaHei",Arial,sans-serif;fill:#64748b;text-anchor:middle}.white{font:700 11px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.panel{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.edge{fill:none;stroke:#475569;stroke-width:2;marker-end:url(#arrow);stroke-linecap:round}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">风险收益热区</text>
+  <text class="sub" x="48" y="76">高价值不是一个点，而是一组会改变路径选择的压力场。</text>
+  <rect class="map" x="56" y="112" width="520" height="392" rx="16"/>
+  <g>
+    <path class="grid" d="M160 112v392M264 112v392M368 112v392M472 112v392M56 210h520M56 308h520M56 406h520"/>
+    <ellipse cx="328" cy="300" rx="205" ry="160" fill="url(#heat)"/>
+    <ellipse cx="220" cy="244" rx="92" ry="58" fill="#f59e0b" opacity=".28"/>
+    <ellipse cx="452" cy="372" rx="92" ry="58" fill="#f59e0b" opacity=".28"/>
+  </g>
+
+  <!-- 连线层 -->
+  <g>
+    <path class="edge" d="M208 428 C260 388 296 360 320 334"/>
+    <path class="edge" d="M452 368 C410 350 375 330 352 314"/>
+    <path class="edge" d="M454 222 C408 238 374 260 350 282"/>
+  </g>
+
+  <!-- 节点层 -->
+  <g>
+    <rect class="poi" x="268" y="258" width="120" height="78" rx="10"/><rect x="290" y="272" width="76" height="24" rx="6" fill="#e11d48"/>
+    <rect class="poi" x="166" y="212" width="96" height="54" rx="8"/>
+    <rect class="poi" x="418" y="342" width="96" height="54" rx="8"/>
+    <rect class="poi" x="160" y="408" width="96" height="54" rx="8"/>
+    <rect class="poi" x="414" y="196" width="96" height="54" rx="8"/>
+    <rect x="72" y="456" width="76" height="28" rx="7" fill="#334155"/>
+    <rect x="482" y="456" width="76" height="28" rx="7" fill="#334155"/>
+    <rect x="480" y="136" width="76" height="28" rx="7" fill="#334155"/>
+  </g>
+
+  <!-- 文本层 -->
+  <g>
+    <text class="white" x="328" y="284">核心实验厂</text><text class="cap" x="328" y="316">高价值 / 高噪声</text>
+    <text class="label" x="214" y="239">铁路仓库</text><text class="label" x="466" y="369">码头</text>
+    <text class="label" x="208" y="435">宿舍</text><text class="label" x="462" y="223">行政楼</text>
+    <text class="white" x="110" y="470">撤离 A</text><text class="white" x="520" y="470">撤离 B</text><text class="white" x="518" y="150">撤离 C</text>
+  </g>
+
+  <!-- 说明层 -->
+  <g>
+    <rect class="panel" x="616" y="126" width="136" height="330" rx="12"/>
+    <text class="label" x="684" y="158">设计读法</text>
+    <text class="sub" x="638" y="202"><tspan x="638" dy="0">1. 红区吸引深潜</tspan><tspan x="638" dy="28">2. 黄区提供过渡</tspan><tspan x="638" dy="28">3. 绿区服务撤退</tspan><tspan x="638" dy="28">4. 撤离不贴红区</tspan><tspan x="638" dy="28">5. 收益线有代价</tspan><tspan x="638" dy="28">6. 代价要可观察</tspan></text>
+    <rect x="638" y="394" width="22" height="14" rx="4" fill="#e11d48"/><text class="sub" x="670" y="406">高风险</text>
+    <rect x="638" y="424" width="22" height="14" rx="4" fill="#f59e0b"/><text class="sub" x="670" y="436">中风险</text>
+  </g>
+</svg>

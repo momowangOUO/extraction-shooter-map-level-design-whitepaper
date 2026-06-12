@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">撤离阶段压力曲线</title>
+  <desc id="desc">曲线图与调度工具面板分列，标签使用固定锚点，不遮挡曲线。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#fff7ed"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity=".12"/></filter>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.panel{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.axis{stroke:#334155;stroke-width:2}.grid{stroke:#e2e8f0}.risk{fill:none;stroke:#e11d48;stroke-width:4;stroke-linecap:round}.loot{fill:none;stroke:#0f766e;stroke-width:3;stroke-linecap:round;stroke-dasharray:8 7}.label{font:700 12px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle}.cap{font:400 10.5px "Microsoft YaHei",Arial,sans-serif;fill:#64748b;text-anchor:middle}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">撤离阶段压力曲线</text>
+  <text class="sub" x="48" y="76">时间不是倒计时 UI，而是地图行为的调度器。</text>
+
+  <!-- 图表层 -->
+  <rect class="panel" x="56" y="118" width="520" height="330" rx="14"/>
+  <g>
+    <rect x="88" y="150" width="132" height="244" rx="4" fill="#dcfce7" opacity=".72"/>
+    <rect x="220" y="150" width="168" height="244" rx="4" fill="#fef3c7" opacity=".72"/>
+    <rect x="388" y="150" width="156" height="244" rx="4" fill="#ffe4e6" opacity=".72"/>
+    <path class="grid" d="M88 330h456M88 270h456M88 210h456"/>
+    <path class="axis" d="M88 394H544M88 394V150"/>
+    <path class="risk" d="M102 368 C160 316 214 314 260 300 C338 276 400 214 530 172"/>
+    <path class="loot" d="M102 356 C172 256 264 238 334 260 C414 285 470 338 530 374"/>
+  </g>
+  <!-- 文本层 -->
+  <text class="label" x="154" y="426">0-8 分钟</text><text class="cap" x="154" y="444">出生判断</text>
+  <text class="label" x="304" y="426">8-22 分钟</text><text class="cap" x="304" y="444">热区争夺</text>
+  <text class="label" x="466" y="426">22 分钟后</text><text class="cap" x="466" y="444">撤离压力</text>
+  <text class="label" x="458" y="188">总体风险</text><text class="label" x="356" y="304">搜索收益</text>
+
+  <!-- 面板层 -->
+  <rect class="panel" x="616" y="156" width="136" height="240" rx="12"/>
+  <text class="label" x="684" y="192">调度工具</text>
+  <text class="sub" x="638" y="232"><tspan x="638" dy="0">撤离点开关</tspan><tspan x="638" dy="32">高价值广播</tspan><tspan x="638" dy="32">AI 巡逻扩大</tspan><tspan x="638" dy="32">天气能见度</tspan><tspan x="638" dy="32">声音事件</tspan></text>
+</svg>

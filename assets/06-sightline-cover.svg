@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">视线与掩体</title>
+  <desc id="desc">交战空间、长视线和距离图例分层布局，图例文字与色块分别使用独立边界框。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+    <linearGradient id="teal" x1="0" x2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+    <linearGradient id="amber" x1="0" x2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="red" x1="0" x2="1"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity=".12"/></filter>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.arena{fill:#f8fafc;stroke:#d8e0ea;filter:url(#soft-shadow)}.player{fill:#fff;stroke:#334155;stroke-width:2}.sight{stroke:#e11d48;stroke-width:2.5;stroke-dasharray:8 7}.route{stroke:#334155;stroke-width:2.2}.box{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.label{font:700 12px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}.cap{font:400 10.5px "Microsoft YaHei",Arial,sans-serif;fill:#64748b;text-anchor:middle;dominant-baseline:middle}.white{font:700 11px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">视线与掩体</text>
+  <text class="sub" x="48" y="76">交战距离要被地形塑形，而不是由枪械数值独自承担。</text>
+
+  <!-- 地图层 -->
+  <rect class="arena" x="56" y="112" width="688" height="332" rx="16"/>
+  <g>
+    <line class="sight" x1="112" y1="300" x2="690" y2="250"/>
+    <line class="route" x1="112" y1="300" x2="228" y2="344"/>
+    <line class="route" x1="690" y1="250" x2="560" y2="214"/>
+    <rect x="336" y="226" width="56" height="130" rx="8" fill="url(#red)"/><text class="white" x="364" y="291">死角</text>
+    <rect x="220" y="340" width="94" height="32" rx="8" fill="#334155"/><text class="white" x="267" y="356">硬掩体</text>
+    <rect x="540" y="198" width="100" height="32" rx="8" fill="#334155"/><text class="white" x="590" y="214">硬掩体</text>
+    <rect x="388" y="372" width="112" height="38" rx="9" fill="url(#amber)"/><text class="white" x="444" y="391">软遮蔽</text>
+    <rect x="160" y="168" width="138" height="44" rx="9" fill="url(#teal)"/><text class="white" x="229" y="190">中距交换区</text>
+    <rect x="552" y="334" width="146" height="44" rx="9" fill="url(#teal)"/><text class="white" x="625" y="356">撤退缓冲区</text>
+    <circle class="player" cx="112" cy="300" r="18"/><circle class="player" cx="690" cy="250" r="18"/>
+  </g>
+  <!-- 文本层 -->
+  <text class="label" x="112" y="342">玩家 A</text><text class="label" x="690" y="292">玩家 B</text>
+
+  <!-- 说明层 -->
+  <rect class="box" x="566" y="126" width="148" height="88" rx="10"/>
+  <text class="label" x="640" y="152">关卡规则</text>
+  <text class="cap" x="640" y="178">长视线必须被代价抵消</text>
+  <text class="cap" x="640" y="198">噪声 / 暴露 / 退路差</text>
+
+  <rect class="box" x="80" y="482" width="640" height="62" rx="10"/>
+  <rect x="112" y="508" width="72" height="14" rx="4" fill="url(#teal)"/><text class="sub" x="196" y="520">15-35m：近中距运营</text>
+  <rect x="336" y="508" width="86" height="14" rx="4" fill="url(#amber)"/><text class="sub" x="434" y="520">35-80m：步枪压制</text>
+  <rect x="558" y="508" width="66" height="14" rx="4" fill="url(#red)"/><text class="sub" x="636" y="520">80m+：需限制</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">搜打撤核心循环</title>
+  <desc id="desc">基于 800x600 viewBox 的五节点闭环图；节点使用统一 140x74 边界框，连线锚定到边界框边缘。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2f7"/></linearGradient>
+    <linearGradient id="g-teal" x1="0" x2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#14b8a6"/></linearGradient>
+    <linearGradient id="g-amber" x1="0" x2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#f59e0b"/></linearGradient>
+    <linearGradient id="g-red" x1="0" x2="1"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#f97316"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0f172a" flood-opacity=".14"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#475569"/></marker>
+    <path id="i-loop" d="M8 2a6 6 0 1 0 5.3 8.8h-2.1A4.2 4.2 0 1 1 12 6H9V4h6v6h-2V7.2A6 6 0 0 0 8 2Z"/>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 13px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.card{fill:#fff;stroke:#d8e0ea;stroke-width:1.4;filter:url(#soft-shadow)}.txt{font:700 15px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}.cap{font:400 11px "Microsoft YaHei",Arial,sans-serif;fill:#64748b;text-anchor:middle}.edge{fill:none;stroke:#475569;stroke-width:2.4;stroke-linecap:round;marker-end:url(#arrow)}.chip{fill:#f8fafc;stroke:#d8e0ea}.white{fill:#fff}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">搜打撤核心循环</text>
+  <text class="sub" x="48" y="78">地图把收益、信息、交战和撤离组织成可复盘的风险决策。</text>
+
+  <!-- 连线层：节点 bbox 为 140x74，路径锚定边缘并保留 marker 偏移 -->
+  <g>
+    <path class="edge" d="M400 151 C455 160 493 187 526 226"/>
+    <path class="edge" d="M553 300 C545 355 514 398 468 428"/>
+    <path class="edge" d="M332 459 C277 444 238 407 216 354"/>
+    <path class="edge" d="M210 226 C238 180 286 154 340 146"/>
+    <path class="edge" d="M470 300 C458 318 438 332 415 337"/>
+  </g>
+
+  <!-- 节点层 -->
+  <g>
+    <rect class="card" x="330" y="104" width="140" height="74" rx="10"/>
+    <circle cx="354" cy="141" r="16" fill="url(#g-teal)"/><use href="#i-loop" x="346" y="133" width="16" height="16" class="white"/>
+    <rect class="card" x="526" y="226" width="140" height="74" rx="10"/>
+    <circle cx="550" cy="263" r="16" fill="url(#g-amber)"/><use href="#i-loop" x="542" y="255" width="16" height="16" class="white"/>
+    <rect class="card" x="428" y="424" width="140" height="74" rx="10"/>
+    <circle cx="452" cy="461" r="16" fill="url(#g-red)"/><use href="#i-loop" x="444" y="453" width="16" height="16" class="white"/>
+    <rect class="card" x="232" y="424" width="140" height="74" rx="10"/>
+    <circle cx="256" cy="461" r="16" fill="url(#g-teal)"/><use href="#i-loop" x="248" y="453" width="16" height="16" class="white"/>
+    <rect class="card" x="134" y="226" width="140" height="74" rx="10"/>
+    <circle cx="158" cy="263" r="16" fill="url(#g-red)"/><use href="#i-loop" x="150" y="255" width="16" height="16" class="white"/>
+    <rect class="card" x="330" y="278" width="140" height="82" rx="12"/>
+  </g>
+
+  <!-- 文本层 -->
+  <g>
+    <text class="txt" x="400" y="134">进入</text><text class="cap" x="400" y="158">携装下注</text>
+    <text class="txt" x="596" y="256">搜索</text><text class="cap" x="596" y="280">物资与线索</text>
+    <text class="txt" x="498" y="454">交战</text><text class="cap" x="498" y="478">抢夺控制权</text>
+    <text class="txt" x="302" y="454">撤离</text><text class="cap" x="302" y="478">兑现收益</text>
+    <text class="txt" x="204" y="256">损失</text><text class="cap" x="204" y="280">经验沉淀</text>
+    <text class="txt" x="400" y="310">抉择</text><text class="cap" x="400" y="334">深入 / 转移 / 退出</text>
+  </g>
+
+  <g>
+    <rect class="chip" x="76" y="522" width="300" height="42" rx="8"/>
+    <text class="sub" x="96" y="548">地图抓手：路径、地标、热区、撤离点、收益</text>
+    <rect class="chip" x="424" y="522" width="300" height="42" rx="8"/>
+    <text class="sub" x="444" y="548">关卡抓手：入口、视线、掩体、垂直、距离</text>
+  </g>
+</svg>

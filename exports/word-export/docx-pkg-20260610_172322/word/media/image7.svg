@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">8 出生点到 2 撤离点路线矩阵</title>
+  <desc id="desc">用矩阵方式评估 8 个出生点到中心撤离和南部撤离的路线压力、收益倾向和风险。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#ecfdf5"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#111827" flood-opacity=".13"/></filter>
+  </defs>
+  <style>
+    .h1{font:700 24px "Microsoft YaHei",Arial,sans-serif;fill:#111827}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.panel{fill:#fff;stroke:#e2e8f0;filter:url(#soft-shadow)}.head{fill:#1f2937}.spawn{fill:#dcfce7}.mid{fill:#fef3c7}.risk{fill:#fee2e2}.route{fill:#ede9fe}.grid{stroke:#e2e8f0;stroke-width:1}.txt{font:700 11px "Microsoft YaHei",Arial,sans-serif;fill:#111827;text-anchor:middle;dominant-baseline:middle}.note{font:400 9.5px "Microsoft YaHei",Arial,sans-serif;fill:#475569;text-anchor:middle;dominant-baseline:middle}.white{font:700 11px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.cap{font:400 11px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.badge{fill:#16a34a}.extract{fill:#dc3b34}
+  </style>
+
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="44" y="42">出生点到撤离点路线矩阵</text>
+  <text class="sub" x="44" y="64">公平性看真实路线和选择，不看直线距离。每个出生点都要有稳搜、成长、抢点三种开局。</text>
+
+  <!-- 节点层 / 表格层 -->
+  <rect class="panel" x="44" y="96" width="712" height="386" rx="12"/>
+  <g>
+    <rect class="head" x="44" y="96" width="92" height="54" rx="10"/><rect class="head" x="136" y="96" width="132" height="54"/><rect class="head" x="268" y="96" width="132" height="54"/><rect class="head" x="400" y="96" width="148" height="54"/><rect class="head" x="548" y="96" width="208" height="54" rx="10"/>
+    <text class="white" x="90" y="123">出生簇</text><text class="white" x="202" y="123">中心撤离</text><text class="white" x="334" y="123">南部撤离</text><text class="white" x="474" y="123">首选成长</text><text class="white" x="652" y="123">核心风险</text>
+
+    <rect class="spawn" x="44" y="150" width="92" height="64"/><rect class="mid" x="136" y="150" width="132" height="64"/><rect class="route" x="268" y="150" width="132" height="64"/><rect class="spawn" x="400" y="150" width="148" height="64"/><rect class="risk" x="548" y="150" width="208" height="64"/>
+    <rect class="spawn" x="44" y="214" width="92" height="64"/><rect class="mid" x="136" y="214" width="132" height="64"/><rect class="route" x="268" y="214" width="132" height="64"/><rect class="spawn" x="400" y="214" width="148" height="64"/><rect class="risk" x="548" y="214" width="208" height="64"/>
+    <rect class="spawn" x="44" y="278" width="92" height="64"/><rect class="risk" x="136" y="278" width="132" height="64"/><rect class="mid" x="268" y="278" width="132" height="64"/><rect class="route" x="400" y="278" width="148" height="64"/><rect class="risk" x="548" y="278" width="208" height="64"/>
+    <rect class="spawn" x="44" y="342" width="92" height="64"/><rect class="mid" x="136" y="342" width="132" height="64"/><rect class="risk" x="268" y="342" width="132" height="64"/><rect class="route" x="400" y="342" width="148" height="64"/><rect class="risk" x="548" y="342" width="208" height="64"/>
+    <rect class="spawn" x="44" y="406" width="92" height="76"/><rect class="risk" x="136" y="406" width="132" height="76"/><rect class="mid" x="268" y="406" width="132" height="76"/><rect class="route" x="400" y="406" width="148" height="76"/><rect class="risk" x="548" y="406" width="208" height="76"/>
+    <path class="grid" d="M136 96 V482 M268 96 V482 M400 96 V482 M548 96 V482 M44 150 H756 M44 214 H756 M44 278 H756 M44 342 H756 M44 406 H756"/>
+  </g>
+
+  <!-- 文本层 -->
+  <g>
+    <text class="txt" x="90" y="182">左上 / 左侧</text><text class="txt" x="202" y="174">中等</text><text class="note" x="202" y="194">经左下或中路</text><text class="txt" x="334" y="174">偏远</text><text class="note" x="334" y="194">可低噪声转移</text><text class="txt" x="474" y="174">左上 T2</text><text class="note" x="652" y="174">左侧出生被夹击</text><text class="note" x="652" y="194">需 45 秒安全展开</text>
+    <text class="txt" x="90" y="246">上中</text><text class="txt" x="202" y="238">较近</text><text class="note" x="202" y="258">中心压力高</text><text class="txt" x="334" y="238">中等</text><text class="note" x="334" y="258">需穿过中路</text><text class="txt" x="474" y="238">右上 T2</text><text class="note" x="652" y="238">速冲中心易过早团灭</text><text class="note" x="652" y="258">需要 T3 缓冲房</text>
+    <text class="txt" x="90" y="310">右侧 / 右中</text><text class="txt" x="202" y="302">中等偏险</text><text class="note" x="202" y="322">可侧翼截击</text><text class="txt" x="334" y="302">较近</text><text class="note" x="334" y="322">后期兑现</text><text class="txt" x="474" y="302">右中 T2</text><text class="note" x="652" y="302">大房单门控死</text><text class="note" x="652" y="322">至少 2 有效入口</text>
+    <text class="txt" x="90" y="374">左中 / 左下</text><text class="txt" x="202" y="366">较近</text><text class="note" x="202" y="386">中心早撤</text><text class="txt" x="334" y="366">偏远</text><text class="note" x="334" y="386">携宝风险高</text><text class="txt" x="474" y="366">左下 T2/T1</text><text class="note" x="652" y="366">T0 速刷风险</text><text class="note" x="652" y="386">拾取必须有代价</text>
+    <text class="txt" x="90" y="444">下方 / 南部</text><text class="txt" x="202" y="436">偏险</text><text class="note" x="202" y="456">穿中路压力</text><text class="txt" x="334" y="436">较近</text><text class="note" x="334" y="456">兑现路线清晰</text><text class="txt" x="474" y="436">右下 T1</text><text class="note" x="652" y="436">出生后直接蹲撤离</text><text class="note" x="652" y="456">加巡逻和反绕</text>
+  </g>
+
+  <rect class="panel" x="72" y="520" width="656" height="42" rx="10"/>
+  <text class="cap" x="96" y="546">评审口径：任意出生点都应有低风险搜索、中风险成长、高风险抢点三条路线，而不是只看到撤离点距离。</text>
+</svg>

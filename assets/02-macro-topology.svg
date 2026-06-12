@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">边境工业隔离区宏观拓扑</title>
+  <desc id="desc">地图节点使用固定边界框和边缘锚点连接，右侧图例独立分栏避免遮挡。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#ecfdf5"/></linearGradient>
+    <linearGradient id="hot" x1="0" x2="1"><stop offset="0" stop-color="#be123c"/><stop offset="1" stop-color="#fb7185"/></linearGradient>
+    <linearGradient id="mid" x1="0" x2="1"><stop offset="0" stop-color="#b45309"/><stop offset="1" stop-color="#fbbf24"/></linearGradient>
+    <linearGradient id="low" x1="0" x2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#5eead4"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity=".13"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#334155"/></marker>
+    <path id="i-pin" d="M8 1.8a5 5 0 0 0-5 5c0 3.8 5 7.4 5 7.4s5-3.6 5-7.4a5 5 0 0 0-5-5Zm0 6.8a1.8 1.8 0 1 1 0-3.6 1.8 1.8 0 0 1 0 3.6Z"/>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.map{fill:#f8fafc;stroke:#d8e0ea;stroke-width:1.4;filter:url(#soft-shadow)}.node{fill:#fff;stroke:#d8e0ea;stroke-width:1.3;filter:url(#soft-shadow)}.title{font:700 13px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle;dominant-baseline:middle}.cap{font:400 10.5px "Microsoft YaHei",Arial,sans-serif;fill:#64748b;text-anchor:middle}.edge{fill:none;stroke:#334155;stroke-width:5;stroke-linecap:round;opacity:.38}.alt{fill:none;stroke:#0f766e;stroke-width:3;stroke-linecap:round;stroke-dasharray:7 6;marker-end:url(#arrow)}.main{fill:none;stroke:#334155;stroke-width:4;stroke-linecap:round;marker-end:url(#arrow)}.legend{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.white{fill:#fff}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">宏观拓扑：边境工业隔离区</text>
+  <text class="sub" x="48" y="76">多路线包围高价值区，主线制造遭遇，支线提供绕行与撤退。</text>
+
+  <!-- 地图背景层 -->
+  <rect class="map" x="48" y="112" width="548" height="396" rx="18"/>
+
+  <!-- 连线层 -->
+  <g>
+    <path class="edge" d="M128 410 C226 340 330 306 425 234 C470 200 512 174 556 148"/>
+    <path class="main" d="M128 410 C226 340 330 306 425 234 C470 200 512 174 556 148"/>
+    <path class="alt" d="M128 178 C230 225 310 270 356 314 C420 374 480 420 535 438"/>
+    <path class="alt" d="M530 438 C465 360 406 302 344 252 C296 214 246 184 194 158"/>
+    <path class="alt" d="M180 448 C290 424 382 390 468 334 C515 304 548 276 576 248"/>
+  </g>
+
+  <!-- 节点层 -->
+  <g>
+    <rect class="node" x="288" y="246" width="140" height="82" rx="10"/><rect x="312" y="264" width="92" height="26" rx="6" fill="url(#hot)"/>
+    <rect class="node" x="178" y="286" width="104" height="56" rx="8"/><rect class="node" x="438" y="286" width="104" height="56" rx="8"/>
+    <rect class="node" x="286" y="386" width="104" height="56" rx="8"/><rect class="node" x="372" y="154" width="104" height="56" rx="8"/>
+    <circle cx="128" cy="410" r="17" fill="#fff" stroke="#334155" stroke-width="2"/><use href="#i-pin" x="120" y="402" width="16" height="16" fill="#334155"/>
+    <circle cx="128" cy="178" r="17" fill="#fff" stroke="#334155" stroke-width="2"/><use href="#i-pin" x="120" y="170" width="16" height="16" fill="#334155"/>
+    <circle cx="535" cy="438" r="17" fill="#fff" stroke="#334155" stroke-width="2"/><use href="#i-pin" x="527" y="430" width="16" height="16" fill="#334155"/>
+    <circle cx="556" cy="148" r="17" fill="#fff" stroke="#334155" stroke-width="2"/><use href="#i-pin" x="548" y="140" width="16" height="16" fill="#334155"/>
+    <rect x="66" y="468" width="94" height="28" rx="7" fill="#334155"/><rect x="490" y="468" width="94" height="28" rx="7" fill="#334155"/><rect x="484" y="120" width="96" height="28" rx="7" fill="#334155"/>
+  </g>
+
+  <!-- 文本层 -->
+  <g>
+    <text class="title" x="358" y="277" fill="#fff">核心实验厂</text><text class="cap" x="358" y="309">高价值 / 强 AI / 多入口</text>
+    <text class="title" x="230" y="311">铁路仓库</text><text class="title" x="490" y="311">污水站</text>
+    <text class="title" x="338" y="411">宿舍区</text><text class="title" x="424" y="179">行政楼</text>
+    <text class="cap" x="128" y="445">S1 西南</text><text class="cap" x="128" y="153">S2 西北</text><text class="cap" x="535" y="473">S3 东南</text><text class="cap" x="556" y="123">S4 东北</text>
+    <text class="cap" x="113" y="486" fill="#fff">E1 公路</text><text class="cap" x="537" y="486" fill="#fff">E2 码头</text><text class="cap" x="532" y="138" fill="#fff">E3 山口</text>
+  </g>
+
+  <!-- 图例层 -->
+  <g>
+    <rect class="legend" x="624" y="126" width="128" height="328" rx="12"/>
+    <text class="title" x="688" y="158">图例</text>
+    <line x1="646" y1="196" x2="698" y2="196" class="main"/><text class="sub" x="646" y="220">主干冲突路线</text>
+    <line x1="646" y1="256" x2="698" y2="256" class="alt"/><text class="sub" x="646" y="280">绕行撤退路线</text>
+    <rect x="646" y="308" width="24" height="16" rx="4" fill="url(#hot)"/><text class="sub" x="680" y="321">高价值</text>
+    <rect x="646" y="344" width="24" height="16" rx="4" fill="url(#mid)"/><text class="sub" x="680" y="357">中风险</text>
+    <rect x="646" y="380" width="24" height="16" rx="4" fill="url(#low)"/><text class="sub" x="680" y="393">低风险</text>
+  </g>
+</svg>

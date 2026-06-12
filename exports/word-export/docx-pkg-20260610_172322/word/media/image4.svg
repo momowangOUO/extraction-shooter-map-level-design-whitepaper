@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">T0-T3 风险收益热区</title>
+  <desc id="desc">展示 Demo v0 中 T0-T3 物资区对应的风险收益梯度、撤离压力和路线选择。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#fff7ed"/></linearGradient>
+    <radialGradient id="hot0"><stop offset="0" stop-color="#dc3b34" stop-opacity=".42"/><stop offset="1" stop-color="#dc3b34" stop-opacity=".02"/></radialGradient>
+    <radialGradient id="hot1"><stop offset="0" stop-color="#d97706" stop-opacity=".36"/><stop offset="1" stop-color="#d97706" stop-opacity=".02"/></radialGradient>
+    <radialGradient id="hot2"><stop offset="0" stop-color="#6d28d9" stop-opacity=".28"/><stop offset="1" stop-color="#6d28d9" stop-opacity=".02"/></radialGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#111827" flood-opacity=".14"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#475569"/></marker>
+  </defs>
+  <style>
+    .h1{font:700 24px "Microsoft YaHei",Arial,sans-serif;fill:#111827}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.panel{fill:#fff;stroke:#e2e8f0;filter:url(#soft-shadow)}.map{fill:#f3f4f6;stroke:#1f2937;stroke-width:1.8}.wall{fill:none;stroke:#374151;stroke-width:2}.route{fill:none;stroke:#475569;stroke-width:2.5;marker-end:url(#arrow);stroke-dasharray:7 6}.t0{fill:#dc3b34}.t1{fill:#d97706}.t2{fill:#6d28d9}.t3{fill:#9ca3af}.spawn{fill:#fff;stroke:#16a34a;stroke-width:5}.extract{fill:#fff;stroke:#dc3b34;stroke-width:5}.label{font:700 12px "Microsoft YaHei",Arial,sans-serif;fill:#111827;text-anchor:middle;dominant-baseline:middle}.white{font:700 10px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.cap{font:400 11px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.legend{font:700 13px "Microsoft YaHei",Arial,sans-serif;fill:#111827}
+  </style>
+
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="44" y="42">T0-T3 风险收益热区</text>
+  <text class="sub" x="44" y="64">T0 必须带代价，T1 制造争夺，T2 支撑构筑，T3 负责通行与缓冲。</text>
+
+  <!-- 地图层 -->
+  <g transform="translate(54 86) scale(1.48)">
+    <rect class="map" x="0" y="0" width="300" height="300" rx="2"/>
+    <rect class="t3" x="4" y="4" width="292" height="292" rx="2" opacity=".22"/>
+    <circle cx="103" cy="197" r="68" fill="url(#hot0)"/>
+    <circle cx="191" cy="136" r="70" fill="url(#hot1)"/>
+    <circle cx="253" cy="274" r="78" fill="url(#hot1)"/>
+    <circle cx="51" cy="45" r="54" fill="url(#hot2)"/>
+    <circle cx="268" cy="26" r="60" fill="url(#hot2)"/>
+    <circle cx="262" cy="127" r="58" fill="url(#hot2)"/>
+    <circle cx="188" cy="198" r="50" fill="url(#hot2)"/>
+    <circle cx="76" cy="266" r="56" fill="url(#hot2)"/>
+    <path class="wall" d="M19 18 H83 M104 0 V17 M115 17 H234 M234 17 V51 M243 50 H287 M287 59 V105 M244 105 H287 V147"/>
+    <path class="wall" d="M18 30 V64 M18 64 H83 M83 30 H104 M94 64 H158 M158 30 V78 M158 78 H94"/>
+    <path class="wall" d="M0 89 H64 M38 101 V149 M0 164 H20 M20 164 V187 M18 212 H38"/>
+    <path class="wall" d="M83 88 V137 M112 88 H139 M160 89 V136 M162 89 H215 M215 89 V136"/>
+    <path class="wall" d="M236 107 V139 M236 149 H300 M267 164 V237 M203 160 V238 M177 183 H215 V300"/>
+    <path class="wall" d="M38 210 V236 H58 V282 M58 236 H190 M125 213 H203 M112 267 V300 M127 267 H191"/>
+    <path class="wall" d="M0 187 H38 M58 164 H84 M84 164 V210 M58 210 H122 M123 210 H203 M203 250 H267 M202 267 V300"/>
+    <rect class="t0" x="84" y="184" width="38" height="26" rx="1.5"/><text class="white" x="103" y="197">T0</text>
+    <rect class="t1" x="38" y="164" width="46" height="46" rx="1.5"/><text class="white" x="61" y="187">T1</text>
+    <rect class="t1" x="166" y="113" width="49" height="46" rx="1.5"/><text class="white" x="191" y="136">T1</text>
+    <rect class="t1" x="207" y="250" width="91" height="48" rx="1.5"/><text class="white" x="253" y="274">T1</text>
+    <rect class="t2" x="24" y="28" width="54" height="34" rx="1.5"/><rect class="t2" x="236" y="2" width="64" height="48" rx="1.5"/><rect class="t2" x="84" y="89" width="28" height="48" rx="1.5"/><rect class="t2" x="235" y="107" width="53" height="40" rx="1.5"/><rect class="t2" x="60" y="235" width="32" height="63" rx="1.5"/><rect class="t2" x="160" y="184" width="55" height="28" rx="1.5"/>
+    <circle class="extract" cx="145" cy="150" r="10"/><circle class="extract" cx="157" cy="290" r="10"/>
+    <path class="route" d="M103 197 C121 178 134 161 145 150"/>
+    <path class="route" d="M253 274 C218 282 184 289 157 290"/>
+  </g>
+
+  <!-- 节点层 -->
+  <g>
+    <rect class="panel" x="540" y="98" width="216" height="290" rx="12"/>
+    <text class="legend" x="566" y="132">风险收益解释</text>
+    <rect class="t0" x="566" y="154" width="18" height="18" rx="4"/><text class="cap" x="598" y="168">T0：诅咒核心，最高代价</text>
+    <rect class="t1" x="566" y="198" width="18" height="18" rx="4"/><text class="cap" x="598" y="212">T1：高价值构筑与小队战</text>
+    <rect class="t2" x="566" y="242" width="18" height="18" rx="4"/><text class="cap" x="598" y="256">T2：职业成长和路线分化</text>
+    <rect class="t3" x="566" y="286" width="18" height="18" rx="4"/><text class="cap" x="598" y="300">T3：基础搜索和通行缓冲</text>
+    <text class="cap" x="566" y="338">
+      <tspan x="566" dy="0">热区越亮，越需要声音、怪物、</tspan>
+      <tspan x="566" dy="17">显形或撤离代价来抵消收益。</tspan>
+    </text>
+  </g>
+
+  <!-- 文本层 -->
+  <rect class="panel" x="74" y="540" width="626" height="38" rx="10"/>
+  <text class="sub" x="94" y="564">结论：左下 T0 不能无声速刷；中部 T1 诱发提前撤离；右下 T1 负责后期带宝兑现。</text>
+</svg>

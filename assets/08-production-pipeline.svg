@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 800 600" role="img" aria-labelledby="title desc">
+  <title id="title">地图关卡生产管线</title>
+  <desc id="desc">五阶段生产流程，卡片使用统一 126x174 边界框，箭头连接相邻卡片边缘。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f8fafc"/><stop offset="1" stop-color="#eef2ff"/></linearGradient>
+    <linearGradient id="head" x1="0" x2="1"><stop offset="0" stop-color="#1e293b"/><stop offset="1" stop-color="#475569"/></linearGradient>
+    <filter id="soft-shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#0f172a" flood-opacity=".12"/></filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9 Z" fill="#475569"/></marker>
+    <path id="i-doc" d="M4 2h6l3 3v9H4V2Zm6 1.5V6h2.5L10 3.5ZM6 8h6v1.4H6V8Zm0 3h6v1.4H6V11Z"/>
+  </defs>
+  <style>
+    .h1{font:700 25px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a}.sub{font:400 12px "Microsoft YaHei",Arial,sans-serif;fill:#64748b}.card{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.bar{fill:url(#head)}.white{font:700 12px "Microsoft YaHei",Arial,sans-serif;fill:#fff;text-anchor:middle;dominant-baseline:middle}.txt{font:400 10.5px "Microsoft YaHei",Arial,sans-serif;fill:#475569}.edge{fill:none;stroke:#475569;stroke-width:2.2;marker-end:url(#arrow);stroke-linecap:round}.loop{fill:none;stroke:#0f766e;stroke-width:2.2;stroke-dasharray:8 7;marker-end:url(#arrow)}.panel{fill:#fff;stroke:#d8e0ea;filter:url(#soft-shadow)}.label{font:700 15px "Microsoft YaHei",Arial,sans-serif;fill:#0f172a;text-anchor:middle}
+  </style>
+  <!-- 背景层 -->
+  <rect width="800" height="600" rx="18" fill="url(#bg)"/>
+  <text class="h1" x="48" y="52">地图关卡生产管线</text>
+  <text class="sub" x="48" y="76">从纸面假设到灰盒、白盒、遥测，再回到运营迭代。</text>
+
+  <!-- 连线层 -->
+  <g>
+    <path class="edge" d="M174 240H205"/><path class="edge" d="M331 240H362"/><path class="edge" d="M488 240H519"/><path class="edge" d="M645 240H676"/>
+    <path class="loop" d="M707 430 C600 520 220 520 111 430"/>
+  </g>
+
+  <!-- 节点层 -->
+  <g>
+    <rect class="card" x="48" y="142" width="126" height="196" rx="10"/><rect class="bar" x="48" y="142" width="126" height="46" rx="10"/>
+    <rect class="card" x="205" y="142" width="126" height="196" rx="10"/><rect class="bar" x="205" y="142" width="126" height="46" rx="10"/>
+    <rect class="card" x="362" y="142" width="126" height="196" rx="10"/><rect class="bar" x="362" y="142" width="126" height="46" rx="10"/>
+    <rect class="card" x="519" y="142" width="126" height="196" rx="10"/><rect class="bar" x="519" y="142" width="126" height="46" rx="10"/>
+    <rect class="card" x="676" y="142" width="126" height="196" rx="10"/><rect class="bar" x="676" y="142" width="126" height="46" rx="10"/>
+  </g>
+
+  <!-- 文本层 -->
+  <g>
+    <text class="white" x="111" y="166">纸面设计</text>
+    <text class="txt" x="72" y="218"><tspan x="72" dy="0">品类目标</tspan><tspan x="72" dy="26">地图拓扑</tspan><tspan x="72" dy="26">POI 层级</tspan><tspan x="72" dy="26">撤离规则</tspan></text>
+    <text class="white" x="268" y="166">灰盒验证</text>
+    <text class="txt" x="229" y="218"><tspan x="229" dy="0">路线时长</tspan><tspan x="229" dy="26">视线测试</tspan><tspan x="229" dy="26">出生冲突</tspan><tspan x="229" dy="26">撤离蹲点</tspan></text>
+    <text class="white" x="425" y="166">白盒联调</text>
+    <text class="txt" x="386" y="218"><tspan x="386" dy="0">AI 占区</tspan><tspan x="386" dy="26">物资表</tspan><tspan x="386" dy="26">音频传播</tspan><tspan x="386" dy="26">任务目标</tspan></text>
+    <text class="white" x="582" y="166">封测遥测</text>
+    <text class="txt" x="543" y="218"><tspan x="543" dy="0">死亡热图</tspan><tspan x="543" dy="26">撤离成功</tspan><tspan x="543" dy="26">路线占用</tspan><tspan x="543" dy="26">收益分布</tspan></text>
+    <text class="white" x="739" y="166">运营迭代</text>
+    <text class="txt" x="700" y="218"><tspan x="700" dy="0">刷点微调</tspan><tspan x="700" dy="26">路线补洞</tspan><tspan x="700" dy="26">撤离规则</tspan><tspan x="700" dy="26">赛季事件</tspan></text>
+  </g>
+
+  <rect class="panel" x="216" y="448" width="368" height="54" rx="10"/>
+  <text class="label" x="400" y="481">核心闭环：假设 - 灰盒 - 数据 - 修正 - 再验证</text>
+</svg>
