@@ -1,4 +1,7 @@
 # Search, Defeat, Map and Level Design Professional White Paper
+> Language / 语言：[中文](README.md) | English
+>
+> GitHub Reading Notes: this repository keeps the complete Chinese report, the complete English report, and all local image assets. `过程记录.md` is a local work log only and is intentionally excluded from GitHub.
 
 Map, level, system, numerical and operational collaboration documents for R&D teams
 

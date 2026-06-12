@@ -1,3 +1,6 @@
 过程记录.md
 .DS_Store
 Thumbs.db
+
+# Generated Word export internals; README/README.en are the public reading surface.
+exports/word-export/
