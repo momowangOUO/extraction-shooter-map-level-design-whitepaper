@@ -1,7 +1,17 @@
-# 搜打撤地图与关卡设计专业白皮书
+# Extraction Shooter Map Design Whitepaper：搜打撤地图与关卡设计专业白皮书
 > 语言 / Language：中文 | [English](README.en.md)
 >
 > GitHub 阅读说明：本仓库保留完整中文版报告、完整英文版报告和全部本地图片资产；`过程记录.md` 仅作本地工作日志，已按要求排除，不会上传到 GitHub。
+
+> 一句话：一份面向研发团队的搜打撤 / 撤离射击地图设计白皮书，覆盖拓扑、POI、风险收益、PvPvE、撤离压力与遥测指标。
+>
+> 适合谁：FPS / PvPvE 项目组、关卡策划、系统策划、数值策划、制作人、游戏设计研究者。
+>
+> 为什么值得 Star：它不是单篇观点文，而是一套可以拿去开评审会的地图设计框架，包含原创案例地图、检查表、指标建议和生产管线。
+>
+> 同系列： [Gameplay Matrix 工具包](https://github.com/momowangOUO/level-design-gameplay-matrix-spatial-iteration) / [三角洲行动地图拆解](https://github.com/momowangOUO/delta-force-map-system-reverse-study) / [生存本能与空间心理](https://github.com/momowangOUO/better-level-design-survival-instinct-space-psychology) / [Eternal Return Lumia Island](https://github.com/momowangOUO/eternal-return-lumia-island-level-design-study)
+>
+> 想分享这份资料：可直接使用 [SHARE.md](SHARE.md) 里的中英文文案。
 
 面向研发团队的地图、关卡、系统、数值与运营协作文档
 
