@@ -7,6 +7,8 @@
 >
 > Reading value: this is not a single opinion essay; it is a review-ready design framework with an original case map, checklists, metrics, and a production pipeline.
 >
+> Author: 魔魔王; version: v1.0; publication date: 2026-06-13.
+>
 > Reading entry: this page is the complete English edition; use [INDEX.en.md](INDEX.en.md) for the compact index.
 
 ## Key Takeaways
