@@ -5,9 +5,16 @@
 >
 > For: FPS / PvPvE teams, level designers, systems designers, economy designers, producers, and game-design researchers.
 >
-> Why star it: this is not a single opinion essay; it is a review-ready design framework with an original case map, checklists, metrics, and a production pipeline.
+> Reading value: this is not a single opinion essay; it is a review-ready design framework with an original case map, checklists, metrics, and a production pipeline.
 >
-> Want to share it: use the ready-to-copy posts in [SHARE.md](SHARE.md).
+> Reading entry: this page is the complete English edition; use [INDEX.en.md](INDEX.en.md) for the compact index.
+
+## Key Takeaways
+
+- An extraction-shooter map is not an arena or a scenery container; it is a risk system that compresses loss, reward, time, and information into one match.
+- Topology, POI scripts, spawn points, extraction points, and PvE should not be reviewed separately. If one layer breaks, players explain reward and death differently.
+- Ambush play can exist, but free camping should not. Good maps make ambushes spend time, information, ammo, or extraction-window value.
+- Border Industrial Quarantine Zone is an original method case, not a validated production map; it needs graybox testing and telemetry calibration before production use.
 
 Map, level, system, numerical and operational collaboration documents for R&D teams
 
