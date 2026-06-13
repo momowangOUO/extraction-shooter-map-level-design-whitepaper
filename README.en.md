@@ -1,7 +1,7 @@
 # Extraction Shooter Map Design Whitepaper: PvPvE, POI, Extraction Pressure, Telemetry
 > Language / 语言：[中文](README.md) | English
 >
-> An extraction map is not a container. It is a machine for settling risk.
+> An extraction map is more than a place to fight. Resource layout, enemy pressure, and extraction points keep pushing players to choose between risk and reward.
 >
 > This production-facing whitepaper puts topology, POI scripts, spawn and extraction design, PvPvE, anti-camping cost, and telemetry into one review framework. The original Border Industrial Quarantine Zone case is a method demo, not a validated production map.
 >
@@ -10,7 +10,7 @@
 
 ## The Short Version
 
-- An extraction-shooter map is not an arena or a scenery container; it is a settlement system that compresses loss, reward, time, and information into one match.
+- An extraction-shooter map cannot be reviewed only as an arena or a scenic space. It has to put loss, reward, time, and information into the same match so every move creates a cost or an opportunity.
 - Topology, POI scripts, spawn points, extraction points, and PvE should not be reviewed separately. If one layer breaks, players explain reward and death differently.
 - Ambush play can exist, but free camping should not. Good maps make ambushes spend time, information, ammo, or extraction-window value.
 - Border Industrial Quarantine Zone is an original method case, not a validated production map; it needs graybox testing and telemetry calibration before production use.
@@ -32,7 +32,7 @@ Applicable stages: project review, paper design, gray box verification, white bo
 
 ## summary
 
-The maps of Search and Strike are not arenas in traditional multiplayer shooters, nor are they landscape containers in the open world. It is closer to a "risk-return machine": players enter the map with loseable equipment, search for resources, judge routes, choose whether to engage in battle with limited information, and cash in benefits when the evacuation is successful, and bear losses when they die or fail to evacuate over time. The core task of map and level design is to organize this cycle into a space system that can be learned, repeated, played, and operated in the long term.
+An extraction map should not be treated only as an arena or a scenic open-world space. Players enter with gear they can lose, search with incomplete information, judge routes, and decide whether to fight. Rewards only matter if the team extracts; death or failed extraction turns the whole run into a loss. The core design task is to make that process learnable, repeatable, and varied enough to keep producing new choices.
 
 In this category, every move of the player has an implicit economic meaning. Taking the main road may reach the high-value area faster, but it will be observed by more players; going around the outer circle may be safer, but time will be consumed and the resource limit is lower; entering the core POI can obtain high-value materials, but it will expose the position, consume ammunition, and attract third parties; the extraction point is not only a safety promise, but also a natural inducement for the end-game conflict. Therefore, map design cannot only discuss "whether it looks good" or "whether there are many routes", but must also discuss search efficiency, encounter probability, sound propagation, AI pressure, evacuation reliability, income density, birth fairness and player learning curve.
 

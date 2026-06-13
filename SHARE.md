@@ -2,7 +2,7 @@
 
 ## 中文短帖
 
-搜打撤地图不是容器，是结算风险的机器。
+搜打撤里的地图不只是场景。它会通过资源分布、敌人位置和撤离点，把玩家不断推到风险和收益的选择里。
 
 我整理了一份搜打撤 / 撤离射击地图设计白皮书，把宏观拓扑、POI 进入剧本、风险收益、PvPvE、撤离压力、反蹲成本、生产管线和遥测指标放到一套评审框架里。
 
@@ -12,7 +12,7 @@ GitHub: https://github.com/momowangOUO/extraction-shooter-map-level-design-white
 
 ## 中文长帖
 
-搜打撤最迷人的地方，不是“地图很大”，而是玩家每走一步都在结算风险：装备、时间、信息、声音、撤离窗口，以及“要不要再贪一下”。
+搜打撤最迷人的地方，不是“地图很大”，而是玩家每走一步都要重新判断：装备还值不值得继续赌，时间够不够，声音会不会暴露自己，撤离窗口还能不能赶上。
 
 这份白皮书试着把这种风险拆成研发团队可以评审的结构：
 
@@ -28,7 +28,7 @@ GitHub: https://github.com/momowangOUO/extraction-shooter-map-level-design-white
 
 ## English Short Post
 
-An extraction map is not a container. It is a machine for settling risk.
+An extraction map is more than a place to fight. Resource layout, enemy pressure, and extraction points keep pushing players to choose between risk and reward.
 
 I wrote an extraction-shooter map design whitepaper that puts topology, POI scripts, risk and reward, PvPvE, extraction pressure, anti-camping cost, production workflow, and telemetry into one review framework.
 
