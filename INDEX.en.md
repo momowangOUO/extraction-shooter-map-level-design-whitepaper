@@ -16,7 +16,7 @@ This repository contains one complete report. The README is the full GitHub-read
 
 This is a production-review whitepaper. The original case map, Border Industrial Quarantine Zone, demonstrates the method; it is not a shipped project or an official map.
 
-## Reusable Lines
+## Quotable Lines
 
 - An extraction-shooter map is not an arena or a scenery container; it is a risk-reward machine.
 - Ambush play can exist, but free camping should not.

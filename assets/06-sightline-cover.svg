@@ -34,10 +34,10 @@
   <text class="label" x="112" y="342">玩家 A</text><text class="label" x="690" y="292">玩家 B</text>
 
   <!-- 说明层 -->
-  <rect class="box" x="566" y="126" width="148" height="88" rx="10"/>
-  <text class="label" x="640" y="152">关卡规则</text>
-  <text class="cap" x="640" y="178">长视线必须被代价抵消</text>
-  <text class="cap" x="640" y="198">噪声 / 暴露 / 退路差</text>
+  <rect class="box" x="392" y="126" width="140" height="76" rx="10"/>
+  <text class="label" x="462" y="150">关卡规则</text>
+  <text class="cap" x="462" y="174">长视线必须被代价抵消</text>
+  <text class="cap" x="462" y="192">噪声 / 暴露 / 退路差</text>
 
   <rect class="box" x="80" y="482" width="640" height="62" rx="10"/>
   <rect x="112" y="508" width="72" height="14" rx="4" fill="url(#teal)"/><text class="sub" x="196" y="520">15-35m：近中距运营</text>

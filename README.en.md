@@ -1,22 +1,26 @@
 # Extraction Shooter Map Design Whitepaper: PvPvE, POI, Extraction Pressure, Telemetry
 > Language / 语言：[中文](README.md) | English
 >
-> One-line pitch: a production-facing whitepaper for extraction-shooter map design, covering topology, POI scripts, risk and reward, PvPvE pacing, extraction pressure, and telemetry.
+> An extraction map is not a container. It is a machine for settling risk.
 >
-> For: FPS / PvPvE teams, level designers, systems designers, economy designers, producers, and game-design researchers.
->
-> Reading value: this is not a single opinion essay; it is a review-ready design framework with an original case map, checklists, metrics, and a production pipeline.
+> This production-facing whitepaper puts topology, POI scripts, spawn and extraction design, PvPvE, anti-camping cost, and telemetry into one review framework. The original Border Industrial Quarantine Zone case is a method demo, not a validated production map.
 >
 > Author: 魔魔王; version: v1.0; publication date: 2026-06-13.
 >
-> Reading entry: this page is the complete English edition; use [INDEX.en.md](INDEX.en.md) for the compact index.
 
-## Key Takeaways
+## The Short Version
 
-- An extraction-shooter map is not an arena or a scenery container; it is a risk system that compresses loss, reward, time, and information into one match.
+- An extraction-shooter map is not an arena or a scenery container; it is a settlement system that compresses loss, reward, time, and information into one match.
 - Topology, POI scripts, spawn points, extraction points, and PvE should not be reviewed separately. If one layer breaks, players explain reward and death differently.
 - Ambush play can exist, but free camping should not. Good maps make ambushes spend time, information, ammo, or extraction-window value.
 - Border Industrial Quarantine Zone is an original method case, not a validated production map; it needs graybox testing and telemetry calibration before production use.
+
+## How To Read This Report
+
+- Complete report: keep reading this page.
+- Compact index: [INDEX.en.md](INDEX.en.md).
+- Chinese edition: [README.md](README.md).
+- Evidence boundary: the original case, image notes, and references are collected at the end.
 
 Map, level, system, numerical and operational collaboration documents for R&D teams
 
