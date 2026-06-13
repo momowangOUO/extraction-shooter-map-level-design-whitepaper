@@ -372,6 +372,10 @@ The case of "Border Industrial Quarantine Zone" illustrates that a search and re
 
 Ultimately, the highest goal of searching, attacking, and withdrawing maps is not to allow players to win every game, nor to allow players to complete every game, but to make players willing to review the game after leaving the battle: "If I had just changed a route, retreated earlier, opened the door later, and listened to the sound first, the results may have been different." As long as the map can continue to create such repeatable regrets and plans for the next game, it will have long-term vitality.
 
+## Figure And Source Notes
+
+All figures in the main text are local assets. They help readers understand topology, risk and reward, POI entrances, sightlines and cover, extraction pressure, and the production pipeline. They are level-design diagrams, not competitor screenshots, official scale maps, or real telemetry results. Public product references and methodology sources are collected in the next section.
+
 ## References
 
 - [Hunt: Showdown Official Manual](https://www.huntshowdown.com/manual)
