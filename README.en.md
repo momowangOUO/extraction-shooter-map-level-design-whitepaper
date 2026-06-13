@@ -1,15 +1,11 @@
 # Extraction Shooter Map Design Whitepaper: PvPvE, POI, Extraction Pressure, Telemetry
 > Language / 语言：[中文](README.md) | English
 >
-> GitHub Reading Notes: this repository keeps the complete Chinese report, the complete English report, and all local image assets. `过程记录.md` is a local work log only and is intentionally excluded from GitHub.
-
 > One-line pitch: a production-facing whitepaper for extraction-shooter map design, covering topology, POI scripts, risk and reward, PvPvE pacing, extraction pressure, and telemetry.
 >
 > For: FPS / PvPvE teams, level designers, systems designers, economy designers, producers, and game-design researchers.
 >
 > Why star it: this is not a single opinion essay; it is a review-ready design framework with an original case map, checklists, metrics, and a production pipeline.
->
-> Related repos: [Gameplay Matrix Toolkit](https://github.com/momowangOUO/level-design-gameplay-matrix-spatial-iteration) / [Delta Force Map Study](https://github.com/momowangOUO/delta-force-map-system-reverse-study) / [Survival Instinct And Spatial Psychology](https://github.com/momowangOUO/better-level-design-survival-instinct-space-psychology) / [Eternal Return Lumia Island](https://github.com/momowangOUO/eternal-return-lumia-island-level-design-study)
 >
 > Want to share it: use the ready-to-copy posts in [SHARE.md](SHARE.md).
 
