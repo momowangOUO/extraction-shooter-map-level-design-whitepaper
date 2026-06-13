@@ -1,52 +1,60 @@
-# Share Kit / 推广文案
+# Share Kit / 可转发文案
 
 ## 中文短帖
 
-搜打撤里的地图不只是场景。它会通过资源分布、敌人位置和撤离点，把玩家不断推到风险和收益的选择里。
+搜打撤地图经常被误解成“把资源撒进一张大场景”。但真正让人上头的不是面积，而是每一次贪心都要结算风险。
 
-我整理了一份搜打撤 / 撤离射击地图设计白皮书，把宏观拓扑、POI 进入剧本、风险收益、PvPvE、撤离压力、反蹲成本、生产管线和遥测指标放到一套评审框架里。
+我整理了一份撤离射击地图设计白皮书：拓扑、POI 剧本、PvPvE 摩擦、撤离兑付、反蹲成本、生产管线和遥测指标都放进同一套评审框架里。
 
-如果你正在做 FPS、PvPvE、撤离射击或高风险资源循环，这份更像研发桌上的地图评审工具，而不是单篇观点文。
+适合转给正在做 FPS / PvPvE / 高风险资源循环的策划、关卡、战斗和制作人：少一点凭感觉争，多一点能上会讨论的结构。
 
 GitHub: https://github.com/momowangOUO/extraction-shooter-map-level-design-whitepaper
 
 ## 中文长帖
 
-搜打撤最迷人的地方，不是“地图很大”，而是玩家每走一步都要重新判断：装备还值不值得继续赌，时间够不够，声音会不会暴露自己，撤离窗口还能不能赶上。
+如果一张搜打撤地图只是在场景里放 loot、AI 和撤离点，它很快就会变成跑图表。
 
-这份白皮书试着把这种风险拆成研发团队可以评审的结构：
+好玩的部分在于：玩家明知道前面危险，还是会想再开一扇门、再搜一个房间、再多带一件东西走。
 
-- 拓扑先于美术：路线是否真的能制造选择？
-- POI 不是资源盒子：高价值点是否有进入剧本、暴露窗口和退出成本？
-- PvE 不是填充物：AI 是否在制造节奏，而不是占坑？
-- 反蹲不是禁止埋伏：地图是否让埋伏付出时间、信息、弹药或撤离窗口？
-- 遥测不是事后补救：灰盒阶段就该知道要验证哪些行为。
+这份白皮书就是把这种“想贪但怕死”的张力拆成关卡团队能评审的结构：
 
-里面还包含原创案例“边境工业隔离区”，用来演示方法，不假装是已经验证的量产地图。
+- 路线不是通道：它决定玩家什么时候暴露，什么时候能回头。
+- POI 不是资源盒子：它需要进入压力、停留成本和退出剧本。
+- PvE 不是填充物：它应该制造声音、状态消耗和判断干扰。
+- 撤离点不是终点图标：它是整局收益能不能成立的最后结算。
+- 反蹲不是禁止埋伏：地图要让埋伏付出时间、信息、弹药或撤离窗口。
+- 遥测不是上线后才补：灰盒阶段就该知道要验证什么行为。
+
+里面还放了原创案例“边境工业隔离区”，用来演示方法，不把它包装成已经验证过的量产地图。
 
 GitHub: https://github.com/momowangOUO/extraction-shooter-map-level-design-whitepaper
 
 ## English Short Post
 
-An extraction map is more than a place to fight. Resource layout, enemy pressure, and extraction points keep pushing players to choose between risk and reward.
+Extraction maps are often described as big spaces with loot. That misses the fun part: the map keeps asking players how much greed they can afford.
 
-I wrote an extraction-shooter map design whitepaper that puts topology, POI scripts, risk and reward, PvPvE, extraction pressure, anti-camping cost, production workflow, and telemetry into one review framework.
+I wrote an extraction-shooter map design whitepaper that turns topology, POI scripts, PvPvE friction, extraction payout, anti-camping cost, production workflow, and telemetry into a review framework.
+
+Useful for FPS / PvPvE teams that want fewer vague debates and more map-design language they can actually bring into review.
 
 GitHub: https://github.com/momowangOUO/extraction-shooter-map-level-design-whitepaper
 
 ## English Long Post
 
-Extraction shooters are not interesting because the map is large. They are interesting because every step settles risk: gear, time, information, noise, extraction windows, and the temptation to take one more room.
+If an extraction map is only loot, AI, and exits placed across a large space, it becomes a route table.
 
-This whitepaper turns that risk into a review framework:
+The real design tension is sharper: players know the next room is dangerous, but the map still makes them want to take one more risk.
 
-- Topology before art: does the route structure create real choices?
-- POIs as scripts: does each high-value zone have entry pressure, exposure, and exit cost?
-- PvE as pacing: does AI create friction instead of filling space?
-- Anti-camping as cost design: does ambush play spend time, information, ammo, or extraction-window value?
-- Telemetry as production discipline: what should the team measure before the map reaches content lock?
+This whitepaper breaks that tension into reviewable design questions:
 
-It includes the original Border Industrial Quarantine Zone case as a method demo, with clear evidence boundaries.
+- Routes are not corridors: they decide exposure, retreat, and commitment.
+- POIs are not loot boxes: they need entry pressure, stay cost, and exit scripts.
+- PvE is not filler: it should create noise, state drain, and decision friction.
+- Extraction is not a finish-line icon: it is the final settlement of the raid's value.
+- Anti-camping is not anti-ambush: the map should attach cost to camping behavior.
+- Telemetry is not a post-launch patch note: the team should know what behavior to validate during blockout.
+
+The report includes the original Border Industrial Quarantine Zone case as a method demo, with clear evidence boundaries.
 
 GitHub: https://github.com/momowangOUO/extraction-shooter-map-level-design-whitepaper
 
